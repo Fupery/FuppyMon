@@ -10,8 +10,6 @@ import me.Fupery.FuppyMon.Entity.Parts.StandPart;
 import me.Fupery.FuppyMon.Pose.ArmourStandLimb;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.ArrayList;
-
 public abstract class Biped extends Morphology {
 
     protected EntityPart head, tum;
@@ -90,7 +88,7 @@ public abstract class Biped extends Morphology {
             frame.setPartRotation(upperBody, ArmourStandLimb.LEFT_ARM, 60, 0, 30);
             frame.setPartRotation(upperBody, ArmourStandLimb.RIGHT_ARM, 60, 0, -30);
 
-            frame.setPartRotation(lowerBody, ArmourStandLimb.BODY, 180, 180, 0 );
+            frame.setPartRotation(lowerBody, ArmourStandLimb.BODY, 180, 180, 0);
             frame.setPartRotation(lowerBody, ArmourStandLimb.LEFT_ARM, -60, 180, 0);
             frame.setPartRotation(lowerBody, ArmourStandLimb.RIGHT_ARM, 60, 180, 0);
 

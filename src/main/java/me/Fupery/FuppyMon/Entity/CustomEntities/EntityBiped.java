@@ -9,17 +9,13 @@ import me.Fupery.FuppyMon.Entity.API.Tracker;
 import me.Fupery.FuppyMon.EntityManager;
 import me.Fupery.FuppyMon.Utils.EntityPosition;
 import net.minecraft.server.v1_10_R1.*;
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.craftbukkit.v1_10_R1.CraftSound;
-import org.bukkit.craftbukkit.v1_10_R1.SpigotTimings;
 import org.bukkit.craftbukkit.v1_10_R1.entity.CraftEntity;
 import org.bukkit.craftbukkit.v1_10_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 
-import java.util.Iterator;
-import java.util.List;
 import java.util.Set;
 
 import static me.Fupery.FuppyMon.Utils.Reflection.Accessor;
@@ -41,6 +37,7 @@ public class EntityBiped extends EntityChicken implements Tracker, Pet {
         addGoal(4, new PathfinderGoalTargetNearestPlayer(this));
         addGoal(5, new PathfinderGoalPetFollowOwner(this, world, getNavigation(), 1.0D, 5F, 2.0F));
     }
+
     private WrappedMoveController getController() {
         if (!(moveController instanceof WrappedMoveController)) {
             moveController = new WrappedMoveController(this, getControllerMove());
@@ -65,9 +62,9 @@ public class EntityBiped extends EntityChicken implements Tracker, Pet {
         if (attributes.getAmbient() != null)
             ambientSound = CraftSound.getSoundEffect(CraftSound.getSound(attributes.getAmbient()));
         if (attributes.getHurt() != null)
-        hurtSound = CraftSound.getSoundEffect(CraftSound.getSound(attributes.getHurt()));
+            hurtSound = CraftSound.getSoundEffect(CraftSound.getSound(attributes.getHurt()));
         if (attributes.getDeath() != null)
-        deathSound = CraftSound.getSoundEffect(CraftSound.getSound(attributes.getDeath()));
+            deathSound = CraftSound.getSoundEffect(CraftSound.getSound(attributes.getDeath()));
     }
 
     @Override

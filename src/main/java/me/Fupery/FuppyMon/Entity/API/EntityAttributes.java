@@ -1,6 +1,5 @@
 package me.Fupery.FuppyMon.Entity.API;
 
-import me.Fupery.FuppyMon.Entity.API.Tracker;
 import me.Fupery.FuppyMon.EntityManager;
 import net.minecraft.server.v1_10_R1.World;
 import org.bukkit.Location;

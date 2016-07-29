@@ -7,11 +7,13 @@ public class WrappedMoveController extends ControllerMove {
     public WrappedMoveController(EntityInsentient entityInsentient) {
         super(entityInsentient);
     }
-    public WrappedMoveController(EntityInsentient entityInsentient,  ControllerMove controller) {
+
+    public WrappedMoveController(EntityInsentient entityInsentient, ControllerMove controller) {
         super(entityInsentient);
         controller.a(b, c, d, e);
 
     }
+
     public ControllerMove.Operation getCurrentOperation() {
         return h;
     }

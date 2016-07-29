@@ -26,10 +26,23 @@ public enum Type {
         );
     }
 
+    private final double X0 = 0, X_5 = 0.5, X1 = 1, X2 = 2;
     private Effectiveness[] effectiveness;
 
     Type(Effectiveness... effectiveness) {
         this.effectiveness = effectiveness;
+    }
+
+    private static Effectiveness effectAgainst(Type type, Multiplier multiplier) {
+        return new Effectiveness(type, multiplier);
+    }
+
+    private static Effectiveness[] isWeakAgainst(Type... types) {
+        Effectiveness[] effects = new Effectiveness[types.length];
+        for (int i = 0; i < types.length; i++) {
+            effects[i] = new Effectiveness(types[i], Multiplier.X_5);
+        }
+        return effects;
     }
 
     private void setEffectiveness(Effectiveness... effectiveness) {
@@ -43,27 +56,7 @@ public enum Type {
         }
         return multiplier.getMultiplier();
     }
-    private static Effectiveness effectAgainst(Type type, Multiplier multiplier) {
-        return new Effectiveness(type, multiplier);
-    }
-    private static Effectiveness[] isWeakAgainst(Type... types) {
-        Effectiveness[] effects = new Effectiveness[types.length];
-        for (int i = 0; i < types.length; i++) {
-            effects[i] = new Effectiveness(types[i], Multiplier.X_5);
-        }
-        return effects;
-    }
 
-    static class Effectiveness {
-        private final Type type;
-        private final Multiplier multiplier;
-
-        public Effectiveness(Type type, Multiplier multiplier) {
-            this.type = type;
-            this.multiplier = multiplier;
-        }
-    }
-    private final double X0 = 0, X_5 = 0.5, X1 = 1, X2 = 2;
     private enum Multiplier {
         X0, X_5, X1, X2;
 
@@ -78,6 +71,16 @@ public enum Type {
                 default:
                     return 1;
             }
+        }
+    }
+
+    static class Effectiveness {
+        private final Type type;
+        private final Multiplier multiplier;
+
+        public Effectiveness(Type type, Multiplier multiplier) {
+            this.type = type;
+            this.multiplier = multiplier;
         }
     }
 }

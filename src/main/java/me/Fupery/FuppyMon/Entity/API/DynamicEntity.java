@@ -9,7 +9,6 @@ import me.Fupery.FuppyMon.EntityManager;
 import me.Fupery.FuppyMon.Pose.Pose;
 import me.Fupery.FuppyMon.Utils.EntityPosition;
 import org.apache.commons.lang.builder.HashCodeBuilder;
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.Player;

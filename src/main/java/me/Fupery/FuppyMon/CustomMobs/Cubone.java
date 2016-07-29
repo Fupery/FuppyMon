@@ -1,12 +1,9 @@
 package me.Fupery.FuppyMon.CustomMobs;
 
-import me.Fupery.FuppyMon.Animation.AnimationBuilder;
-import me.Fupery.FuppyMon.Animation.EntityAnimation;
 import me.Fupery.FuppyMon.Combat.Type;
 import me.Fupery.FuppyMon.Entity.Morphology.Biped;
 import me.Fupery.FuppyMon.Entity.Parts.BasicPart;
 import me.Fupery.FuppyMon.Entity.Parts.StandPart;
-import me.Fupery.FuppyMon.Pose.ArmourStandLimb;
 import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -22,7 +19,7 @@ public class Cubone extends Biped {
         head = setHead("Cubone");
         ItemStack chest = new ItemStack(Material.LEATHER_CHESTPLATE);
         LeatherArmorMeta meta = ((LeatherArmorMeta) chest.getItemMeta());
-        meta.setColor(Color.fromRGB(187,146,84));
+        meta.setColor(Color.fromRGB(187, 146, 84));
         chest.setItemMeta(meta);
 //        setArmItem(new ItemStack(Material.STAINED_CLAY));
 //        setBody(new ItemStack(Material.HARD_CLAY, 0, (byte) 15));

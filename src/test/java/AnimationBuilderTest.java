@@ -28,11 +28,11 @@ public class AnimationBuilderTest {
 
         String string2 = poseSet1.getAdvancedPose(part).toString();
 
-        System.out.println("PRE:"  + string1);
+        System.out.println("PRE:" + string1);
         System.out.println();
-        System.out.println("POST:"  + string2);
+        System.out.println("POST:" + string2);
         System.out.println();
-        System.out.println("EQUAL:"  + string1.equals(string2));
+        System.out.println("EQUAL:" + string1.equals(string2));
         System.out.println();
 
         EntityAnimation animation = builder.buildAnimation();
@@ -42,11 +42,11 @@ public class AnimationBuilderTest {
 
         String string3 = poseSet2.getAdvancedPose(part).toString();
 
-        System.out.println("POST-POST:"  + string3);
+        System.out.println("POST-POST:" + string3);
         System.out.println();
-        System.out.println("EQUAL:"  + string1.equals(string3));
+        System.out.println("EQUAL:" + string1.equals(string3));
         System.out.println();
-        System.out.println("POST-PROCESSING EQUAL:"  + string2.equals(string3));
+        System.out.println("POST-PROCESSING EQUAL:" + string2.equals(string3));
         System.out.println();
     }
 

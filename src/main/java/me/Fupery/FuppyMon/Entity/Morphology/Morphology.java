@@ -3,11 +3,11 @@ package me.Fupery.FuppyMon.Entity.Morphology;
 import me.Fupery.FuppyMon.Animation.EntityAnimation;
 import me.Fupery.FuppyMon.Animation.EntityState;
 import me.Fupery.FuppyMon.Combat.Type;
+import me.Fupery.FuppyMon.Entity.API.Tracker;
 import me.Fupery.FuppyMon.Entity.CustomEntities.EntityFlightlessBird;
 import me.Fupery.FuppyMon.Entity.MonsterAttributes;
 import me.Fupery.FuppyMon.Entity.MonsterFactory;
 import me.Fupery.FuppyMon.Entity.Parts.EntityPart;
-import me.Fupery.FuppyMon.Entity.API.Tracker;
 import org.bukkit.Sound;
 
 public abstract class Morphology {

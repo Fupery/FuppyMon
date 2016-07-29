@@ -53,9 +53,9 @@ public class EntityFlightlessBird extends EntityChicken implements Tracker, Pet 
         if (attributes.getAmbient() != null)
             ambientSound = CraftSound.getSoundEffect(CraftSound.getSound(attributes.getAmbient()));
         if (attributes.getHurt() != null)
-        hurtSound = CraftSound.getSoundEffect(CraftSound.getSound(attributes.getHurt()));
+            hurtSound = CraftSound.getSoundEffect(CraftSound.getSound(attributes.getHurt()));
         if (attributes.getDeath() != null)
-        deathSound = CraftSound.getSoundEffect(CraftSound.getSound(attributes.getDeath()));
+            deathSound = CraftSound.getSoundEffect(CraftSound.getSound(attributes.getDeath()));
     }
 
     @Override

@@ -1,11 +1,10 @@
 package me.Fupery.FuppyMon.World;
 
+import me.Fupery.FuppyMon.Combat.Type;
 import me.Fupery.FuppyMon.Entity.Monster;
 import me.Fupery.FuppyMon.Entity.SpawnReason;
 import org.bukkit.Location;
 import org.bukkit.block.Biome;
-import me.Fupery.FuppyMon.Combat.Type;
-
 
 import java.util.List;
 import java.util.Random;
@@ -28,7 +27,7 @@ public class MonsterSpawnHandler {
         }
         monster.spawn(loc, SpawnReason.NATURAL);
     }
-    
+
     Location getNextRandomLocation() {
         return null;// TODO: 25/07/2016  
     }

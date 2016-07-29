@@ -2,7 +2,6 @@ package me.Fupery.FuppyMon.Pose;
 
 import me.Fupery.FuppyMon.Entity.Parts.EntityPart;
 import me.Fupery.FuppyMon.Utils.WrappedArmorStand;
-import org.bukkit.entity.ArmorStand;
 import org.bukkit.util.EulerAngle;
 
 public class AdvancedPose extends Pose {
@@ -71,17 +70,55 @@ public class AdvancedPose extends Pose {
     public void setBodyRotation(double x, double y, double z) {
         body.setRotation(x, y, z);
     }
+
     public void setLeftArmRotation(double x, double y, double z) {
         leftArm.setRotation(x, y, z);
     }
+
     public void setRightArmRotation(double x, double y, double z) {
         rightArm.setRotation(x, y, z);
     }
+
     public void setLeftLegRotation(double x, double y, double z) {
         leftLeg.setRotation(x, y, z);
     }
+
     public void setRightLegRotation(double x, double y, double z) {
         rightLeg.setRotation(x, y, z);
+    }
+
+    public void applyTo(WrappedArmorStand stand) {
+        stand.setBodyPose(new EulerAngle(body.rotX, body.rotY, body.rotZ));
+        stand.setLeftArmPose(new EulerAngle(leftArm.rotX, leftArm.rotY, leftArm.rotZ));
+        stand.setRightArmPose(new EulerAngle(rightArm.rotX, rightArm.rotY, rightArm.rotZ));
+        stand.setLeftLegPose(new EulerAngle(leftLeg.rotX, leftLeg.rotY, leftLeg.rotZ));
+        stand.setRightLegPose(new EulerAngle(rightLeg.rotX, rightLeg.rotY, rightLeg.rotZ));
+    }
+
+    @Override
+    public String toString() {
+        return String.format("{%s, %s, %s : %s, %s, %s : %s, %s {BODY: %s, %s, %s}, {LEFT_ARM: %s, %s, %s}, " +
+                        "{RIGHT_ARM: %s, %s, %s}, {LEFT_LEG: %s, %s, %s}, {RIGHT_LEG: %s, %s, %s}}",
+                x, y, z, rotX, rotY, rotZ, yaw, pitch, body.rotX, body.rotY, body.rotZ,
+                leftArm.rotX, leftArm.rotY, leftArm.rotZ, rightArm.rotX, rightArm.rotY, rightArm.rotZ,
+                leftLeg.rotX, leftLeg.rotY, leftLeg.rotZ, rightLeg.rotX, rightLeg.rotY, rightLeg.rotZ);
+
+        //whew.
+    }
+
+    @Override
+    public AdvancedPose clone() {
+        AdvancedPose result = new AdvancedPose(partId);
+        result.setTranslation(x, y, z);
+        result.setRotation(rotX, rotY, rotZ);
+        result.setDirection(yaw, pitch);
+        result.setBodyRotation(body.rotX, body.rotY, body.rotZ);
+        result.setLeftArmRotation(leftArm.rotX, leftArm.rotY, leftArm.rotZ);
+        result.setRightArmRotation(rightArm.rotX, rightArm.rotY, rightArm.rotZ);
+        result.setLeftLegRotation(leftLeg.rotX, leftLeg.rotY, leftLeg.rotZ);
+        result.setRightLegRotation(rightLeg.rotX, rightLeg.rotY, rightLeg.rotZ);
+
+        return result;
     }
 
     private class PartPose {
@@ -117,38 +154,5 @@ public class AdvancedPose extends Pose {
             }
             return new PartPose(rotX / number, rotY / number, rotZ / number);
         }
-    }
-    public void applyTo(WrappedArmorStand stand) {
-        stand.setBodyPose(new EulerAngle(body.rotX, body.rotY, body.rotZ));
-        stand.setLeftArmPose(new EulerAngle(leftArm.rotX, leftArm.rotY, leftArm.rotZ));
-        stand.setRightArmPose(new EulerAngle(rightArm.rotX, rightArm.rotY, rightArm.rotZ));
-        stand.setLeftLegPose(new EulerAngle(leftLeg.rotX, leftLeg.rotY, leftLeg.rotZ));
-        stand.setRightLegPose(new EulerAngle(rightLeg.rotX, rightLeg.rotY, rightLeg.rotZ));
-    }
-
-    @Override
-    public String toString() {
-        return String.format("{%s, %s, %s : %s, %s, %s : %s, %s {BODY: %s, %s, %s}, {LEFT_ARM: %s, %s, %s}, " +
-                        "{RIGHT_ARM: %s, %s, %s}, {LEFT_LEG: %s, %s, %s}, {RIGHT_LEG: %s, %s, %s}}",
-                x, y, z, rotX, rotY, rotZ, yaw, pitch, body.rotX, body.rotY, body.rotZ,
-                leftArm.rotX, leftArm.rotY, leftArm.rotZ, rightArm.rotX, rightArm.rotY, rightArm.rotZ,
-                leftLeg.rotX, leftLeg.rotY, leftLeg.rotZ, rightLeg.rotX, rightLeg.rotY, rightLeg.rotZ);
-
-        //whew.
-    }
-
-    @Override
-    public AdvancedPose clone() {
-        AdvancedPose result = new AdvancedPose(partId);
-        result.setTranslation(x, y, z);
-        result.setRotation(rotX, rotY, rotZ);
-        result.setDirection(yaw, pitch);
-        result.setBodyRotation(body.rotX, body.rotY, body.rotZ);
-        result.setLeftArmRotation(leftArm.rotX, leftArm.rotY, leftArm.rotZ);
-        result.setRightArmRotation(rightArm.rotX, rightArm.rotY, rightArm.rotZ);
-        result.setLeftLegRotation(leftLeg.rotX, leftLeg.rotY, leftLeg.rotZ);
-        result.setRightLegRotation(rightLeg.rotX, rightLeg.rotY, rightLeg.rotZ);
-
-        return result;
     }
 }
