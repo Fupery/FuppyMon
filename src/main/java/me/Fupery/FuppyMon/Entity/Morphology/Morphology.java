@@ -10,9 +10,6 @@ import me.Fupery.FuppyMon.Entity.Parts.EntityPart;
 import me.Fupery.FuppyMon.Entity.API.Tracker;
 import org.bukkit.Sound;
 
-/**
- * Created by aidenhatcher on 26/07/2016.
- */
 public abstract class Morphology {
 
     private Class<? extends Tracker> entityType;

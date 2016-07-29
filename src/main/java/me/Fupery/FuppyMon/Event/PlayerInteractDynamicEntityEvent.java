@@ -5,9 +5,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-/**
- * Created by aidenhatcher on 20/05/2016.
- */
 public class PlayerInteractDynamicEntityEvent extends Event {
     private static final HandlerList handlers = new HandlerList();
     private final DynamicEntity entity;

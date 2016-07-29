@@ -8,9 +8,6 @@ import me.Fupery.FuppyMon.Pose.Pose;
 import me.Fupery.FuppyMon.Pose.PoseSet;
 import org.junit.Test;
 
-/**
- * Created by aidenhatcher on 26/07/2016.
- */
 public class AnimationBuilderTest {
 
     @Test

@@ -12,9 +12,6 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
 
-/**
- * Created by aidenhatcher on 26/07/2016.
- */
 public abstract class Biped extends Morphology {
 
     protected EntityPart head, tum;

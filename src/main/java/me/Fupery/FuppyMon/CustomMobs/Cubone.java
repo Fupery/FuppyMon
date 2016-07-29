@@ -12,9 +12,6 @@ import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
-/**
- * Created by aidenhatcher on 26/07/2016.
- */
 public class Cubone extends Biped {
 
     private BasicPart head, tum;

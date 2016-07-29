@@ -7,9 +7,6 @@ import org.bukkit.event.player.PlayerChangedWorldEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-/**
- * Created by aidenhatcher on 18/05/2016.
- */
 public class PlayerStatusListener implements Listener {
     private EntityManager manager;
 

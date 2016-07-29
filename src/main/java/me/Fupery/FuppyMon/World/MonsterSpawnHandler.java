@@ -10,9 +10,6 @@ import me.Fupery.FuppyMon.Combat.Type;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Created by aidenhatcher on 25/07/2016.
- */
 public class MonsterSpawnHandler {
     private final Random random;
 

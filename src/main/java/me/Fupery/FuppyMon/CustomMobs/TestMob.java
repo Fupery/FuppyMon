@@ -11,9 +11,6 @@ import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.entity.EntityType;
 
-/**
- * Created by aidenhatcher on 15/06/2016.
- */
 public class TestMob {
     private BasicPart left_wing = new BasicPart(.6, -1.1, 0, 90, 0).setItem(Material.CARPET, (short) 6);
     private BasicPart right_wing = new BasicPart(-.6, -1.1, 0, -90, 0).setItem(Material.CARPET, (short) 6);

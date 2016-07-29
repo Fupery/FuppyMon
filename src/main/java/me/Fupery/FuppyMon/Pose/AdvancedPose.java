@@ -5,9 +5,6 @@ import me.Fupery.FuppyMon.Utils.WrappedArmorStand;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.util.EulerAngle;
 
-/**
- * Created by aidenhatcher on 26/07/2016.
- */
 public class AdvancedPose extends Pose {
 
     private PartPose body = new PartPose(), leftArm = new PartPose(), rightArm = new PartPose(),
