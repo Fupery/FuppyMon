@@ -1,0 +1,10 @@
+name: ${project.name}
+main: me.Fupery.FuppyMon.FuppyMon
+version: ${project.version}
+description: ${project.description}
+depends: []
+author: Fupery
+
+commands:
+  pet:
+    description: summon a pet
